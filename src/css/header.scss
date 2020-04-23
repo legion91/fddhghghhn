@@ -1,0 +1,58 @@
+.header {
+  width: 100%;
+  height: 60px;
+  padding: 7px 40px;
+  box-shadow: 0 -1px 20px 0 rgba(0,0,0,.49);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: fixed;
+  top: 0;
+  background-color: $primary_white;
+}
+
+.sticky {
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.header__logo {
+  font: 50px $logo_font;
+  color: $primary_black;
+  cursor: pointer;
+
+  &:hover {
+    span {
+      background-color: $primary_blue;
+      color: $primary_white;
+      padding: 12px 0px 11px 0;
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+
+  a {
+    font: 20px $primary_font;
+    line-height: 12px;
+    color: $primary_blue;
+    text-transform: uppercase;
+    padding: 20px 20px;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: $primary_blue;
+      color: $primary_white;
+    }
+  }
+}
