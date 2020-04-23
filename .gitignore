@@ -1,6 +1,3 @@
 node_modules
 .idea
 debug.log
-gulpfile.js
-package.json
-package-lock.json
