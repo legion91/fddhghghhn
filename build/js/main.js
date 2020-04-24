@@ -47,8 +47,10 @@ $(document).ready(function () {
 			$('.header__nav').removeClass('menu--open');
 			$('.header').css('background-color', '');
 		} else {
-			$('.header__nav').addClass('menu--open');
-			$('.header').css('background-color', 'var(--color-green-hover)');
+			if (!$('#close').hasClass('close--hide')) {
+				$('.header__nav').addClass('menu--open');
+				$('.header').css('background-color', 'var(--color-green-hover)');
+			}
 		}
 	});
 });
