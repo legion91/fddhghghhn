@@ -57,14 +57,29 @@ $breakpoints: (
 
 // colors
 
-$primary_white: #ffffff;
-$primary_blue: #4ea5f1;
-$primary_black: #040404;
+:root {
+	--color-white: #fdfdfd;
+	--color-black: #393e46;
+	--color-blue-dark: #61b0f5;
+	--color-blue-light: #1fb6f2;
+	--color-green: #97ceba;
+	--color-red: #f44336;
+
+	--color-white-hover: #f1f1f1;
+	--color-black-hover: #7b8189;
+	--color-blue-dark-hover: #4ea5f1;
+	--color-blue-light-hover: #1ba9e2;
+	--color-green-hover: #84c5ae;
+	--color-red-hover: #fd5649;
+}
 
 // fonts
 
-$logo_font: 'AfronikG', sans-serif;
-$primary_font: 'NotoSans', sans-serif;
+$font_saira: 'Saira', sans-serif;
+$font_noto: 'NotoSans', sans-serif;
 
+// transitions
 
+$transition_2ms: .2s;
+$transition_4ms: .4s;
 
