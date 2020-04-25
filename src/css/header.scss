@@ -10,6 +10,7 @@
 	top: 0;
 	background-color: var(--color-white);
 	transition: $transition_4ms;
+	z-index: 999;
 
 	@include media-query($small) {
 		padding: 0 20px;
