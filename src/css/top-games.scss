@@ -1,0 +1,165 @@
+.top-games {
+	padding: 20px 0;
+
+	.top-games__slider {
+		display: flex;
+		justify-content: center;
+		flex-wrap: nowrap;
+
+		@include media-query($tablet) {
+			flex-wrap: wrap;
+			max-width: 999px;
+			margin: 0 auto;
+		}
+
+		.top-games__slide {
+			height: 170px;
+			max-width: 300px;
+			min-width: 300px;
+			width: 100%;
+			background-image: url('../img/top-games_bg.svg');
+			background-size: 50%;
+			position: relative;
+			transition: $transition_2ms;
+
+			@include media-query($tablet) {
+				max-width: unset;
+				width: calc(100% / 2);
+			}
+
+			@include media-query($small) {
+				width: 100%;
+				transition: none;
+			}
+
+			&:nth-child(4n+1),
+			&:nth-child(4n+2),
+			&:nth-child(4n+3),
+			&:nth-child(4n+4) {
+				&::after {
+					content: '';
+					position: absolute;
+					max-height: 150px;
+					height: 100%;
+					width: 210px;
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: bottom;
+					bottom: 0;
+					left: 30%;
+
+					@include media-query($tablet) {
+						left: auto;
+						right: 5%;
+					}
+				}
+			}
+
+			&:nth-child(4n+1) {
+				background-color: rgba(93, 97, 162, 0.80);
+				border-radius: 10px 0 0 10px;
+
+				@include media-query($tablet) {
+					border-radius: 10px 0 0 0;
+				}
+
+				@include media-query($small) {
+					border-radius: 10px 10px 0 0;
+				}
+
+				&::after {
+					background-image: url('../img/top-games_one.webp');
+				}
+			}
+
+			&:nth-child(4n+2) {
+				background-color: rgba(147, 205, 209, 0.80);
+
+				@include media-query($tablet) {
+					border-radius: 0 10px 0 0;
+				}
+
+				@include media-query($small) {
+					border-radius: 0;
+				}
+
+				&::after {
+					background-image: url('../img/top-games_two.webp');
+				}
+			}
+
+			&:nth-child(4n+3) {
+				background-color: rgba(167, 208, 184, 0.80);
+
+				@include media-query($tablet) {
+					border-radius: 0 0 0 10px;
+				}
+
+				@include media-query($small) {
+					border-radius: 0;
+				}
+
+				&::after {
+					background-image: url('../img/top-games_three.webp');
+				}
+			}
+
+			&:nth-child(4n+4) {
+				background-color: rgba(213, 152, 160, 0.80);
+				border-radius: 0 10px 10px 0;
+
+				@include media-query($tablet) {
+					border-radius: 0 0 10px 0;
+				}
+
+				@include media-query($small) {
+					border-radius: 0 0 10px 10px;
+				}
+
+				&::after {
+					background-image: url('../img/top-games_four.webp');
+				}
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				border: 100px / 50px;
+				left: -10px;
+				top: 41px;
+				border-top: 10px solid rgba(57, 69, 75, 0.75);
+				border-left: 10px solid transparent;
+			}
+
+			&:hover {
+				filter: drop-shadow(2px 3px 5px var(--color-black));
+			}
+
+			h2 {
+				position: absolute;
+				top: 14px;
+				left: -10px;
+				background-color: rgba(57, 69, 75, 0.75);
+				padding: 0 5px;
+				border-radius: 8px 8px 8px 0;
+				color: var(--color-white);
+				max-width: 290px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				font-size: 18px;
+				white-space: nowrap;
+				z-index: 1;
+				text-shadow: 1px 1px 3px var(--color-black);
+			}
+
+			span {
+				bottom: 10px;
+				position: absolute;
+				left: 10px;
+				color: var(--color-white);
+				font-size: 11px;
+				text-shadow: 1px 1px 3px var(--color-black);
+			}
+		}
+	}
+}
