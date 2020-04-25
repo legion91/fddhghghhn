@@ -1,10 +1,9 @@
 // Sticky header
 
 $(window).scroll(function () {
+	var header = $('#header');
 	
 	if ($(window).width() > 750) {
-		var header = $('#header');
-		
 		if ($(window).scrollTop() >= 60) {
 			header.addClass('sticky');
 			$('.header__logo').addClass('sticky--logo');
@@ -15,6 +14,16 @@ $(window).scroll(function () {
 			$('.header__logo').removeClass('sticky--logo');
 		}
 	}
+	
+	$(window).resize(function () {
+		if ($(window).width() < 750) {
+			header.removeClass('sticky');
+		} else {
+			if ($(window).scrollTop() >= 60) {
+				header.addClass('sticky');
+			}
+		}
+	});
 });
 
 //Burger menu
