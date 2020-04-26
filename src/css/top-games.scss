@@ -20,7 +20,7 @@
 			background-image: url('../img/top-games_bg.svg');
 			background-size: 50%;
 			position: relative;
-			transition: $transition_2ms;
+			transition: $transition_2ms !important;
 
 			@include media-query($tablet) {
 				max-width: unset;
@@ -29,7 +29,7 @@
 
 			@include media-query($small) {
 				width: 100%;
-				transition: none;
+				transition: none !important;
 			}
 
 			&:nth-child(4n+1),

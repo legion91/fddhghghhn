@@ -23,13 +23,11 @@
 
 // Grid Breakpoints and Class Names
 
-$extra-small: 410px;
 $grid-medium: 750px;
 $grid-large: 990px;
 $grid-tablet: 1280px;
 $grid-widescreen: 1400px;
 
-$extra-small: 'extra-small';
 $small: 'small';
 $medium: 'medium';
 $medium-down: 'medium-down';
@@ -41,7 +39,6 @@ $widescreen: 'widescreen';
 $tablet: 'tablet';
 
 $breakpoints: (
-		$extra-small '(max-width: #{$extra-small - 1})',
 		$small '(max-width: #{$grid-medium - 1})',
 		$medium '(min-width: #{$grid-medium}) and (max-width: #{$grid-large - 1})',
 		$medium-down '(max-width: #{$grid-large - 1})',
