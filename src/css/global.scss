@@ -1,3 +1,7 @@
+* {
+	transition: $transition_2ms;
+}
+
 body {
 	margin-top: 90px;
 	font-family: $font_noto;
