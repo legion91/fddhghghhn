@@ -12,30 +12,79 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 5px;
 
     @include media-query($tablet) {
       max-width: 999px;
       margin: 0 auto;
+      padding: 0;
     }
 
     .release__card {
       display: flex;
-      min-width: 185px;
-      max-width: 250px;
-      flex-grow: 1;
-      flex-direction: column;
+      flex-basis: calc(16.6% - 20px);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 10px 35px 10px;
       background-color: var(--color-white);
       cursor: pointer;
       border-radius: 15px 15px 5px 5px;
-      margin: 0 20px 20px 0;
 
       @include media-query($tablet) {
-        min-width: 220px;
+        flex-basis: calc(20.2% - 20px);
+
+        &:nth-child(6n+5) {
+          margin-right: 0;
+        }
+
+        &:nth-child(6n+6) {
+          display: none;
+        }
+      }
+
+      @include media-query($medium) {
+        flex-basis: calc(34% - 20px);
+
+        &:nth-child(6n+3),
+        &:nth-child(6n+4){
+          margin-right: 0;
+        }
+
+        &:nth-child(6n+4) {
+          margin-left: 0;
+        }
+
+        &:nth-child(6n+6) {
+          display: table;
+        }
+      }
+
+      @include media-query($small) {
+        flex-basis: calc(51% - 20px);
+        min-width: 100px;
+
+        &:nth-child(6n+2),
+        &:nth-child(6n+4) {
+          margin-right: 0;
+        }
+
+        &:nth-child(6n+3),
+        &:nth-child(6n+5) {
+          margin-left: 0;
+        }
+
+        &:nth-child(6n+6) {
+          display: table;
+        }
       }
 
       &:last-child {
         margin-right: 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
       }
 
       img {
@@ -45,7 +94,6 @@ body {
       }
 
       .card-text {
-        z-index: 1;
 
         h2 {
           text-align: center;
@@ -53,11 +101,13 @@ body {
           text-overflow: ellipsis;
           font-size: 16px;
           height: 50px;
+          padding: 0 10px;
         }
       }
 
       &:hover {
         filter: drop-shadow(2px 3px 5px var(--color-black));
+        background-color: #f6fff2;
 
         img {
           filter: none;
@@ -74,7 +124,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
     width: 100%;
     max-width: 200px;
     background-color: var(--color-green);
@@ -83,7 +132,11 @@ body {
     line-height: 35px;
     -webkit-border-radius: 15px;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin: auto;
+
+    @include media-query($medium-down) {
+      line-height: 50px;
+    }
 
     &:hover {
       background-color: var(--color-green-hover);
