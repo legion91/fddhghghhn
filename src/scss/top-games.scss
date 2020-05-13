@@ -1,0 +1,127 @@
+.top-games {
+	padding: 20px 0;
+
+	.top-games__slider {
+		display: flex;
+		justify-content: center;
+		flex-wrap: nowrap;
+
+		@include media-query($tablet) {
+			flex-wrap: wrap;
+		}
+
+		.top-games__slide {
+			height: 200px;
+			width: 25%;
+			background-image: url('../img/sprite.svg#top-games_bg');
+			background-size: 50%;
+			position: relative;
+			transition: $transition_2ms !important;
+			border-radius: 15px;
+			margin: 5px;
+
+			@include media-query($tablet) {
+				max-width: 490px;
+				width: 100%;
+			}
+
+			@include media-query($small) {
+				width: 100%;
+				transition: none !important;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				max-height: 150px;
+				height: 100%;
+				width: 210px;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: bottom;
+				bottom: 0;
+				left: 30%;
+
+				@include media-query($tablet) {
+					left: auto;
+					right: 5%;
+				}
+			}
+
+
+			&:nth-child(1) {
+				background-color: rgba(93, 97, 162, 0.80);
+
+				&::after {
+					background-image: url('../img/top-games_one.webp');
+				}
+			}
+
+			&:nth-child(2) {
+				background-color: rgba(147, 205, 209, 0.80);
+
+				&::after {
+					background-image: url('../img/top-games_two.webp');
+				}
+			}
+
+			&:nth-child(3) {
+				background-color: rgba(167, 208, 184, 0.80);
+
+				&::after {
+					background-image: url('../img/top-games_three.webp');
+				}
+			}
+
+			&:nth-child(4) {
+				background-color: rgba(213, 152, 160, 0.80);
+
+				&::after {
+					background-image: url('../img/top-games_four.webp');
+				}
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				border: 100px / 50px;
+				left: -10px;
+				top: 41px;
+				border-top: 10px solid rgba(57, 69, 75, 0.75);
+				border-left: 10px solid transparent;
+			}
+
+			&:hover {
+				filter: drop-shadow(2px 3px 5px var(--color-black));
+			}
+
+			h2 {
+				position: absolute;
+				top: 14px;
+				left: -10px;
+				background-color: rgba(57, 69, 75, 0.75);
+				padding: 0 5px;
+				border-radius: 8px 8px 8px 0;
+				color: var(--color-white);
+				max-width: 290px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				font-size: 18px;
+				white-space: nowrap;
+				z-index: 1;
+				text-shadow: 1px 1px 3px var(--color-black);
+			}
+
+			span {
+				bottom: 10px;
+				position: absolute;
+				left: 10px;
+				color: var(--color-white);
+				font-size: 11px;
+				text-shadow: 1px 1px 3px var(--color-black);
+				font-family: $font_saira;
+				font-weight: 300;
+			}
+		}
+	}
+}

@@ -1,0 +1,159 @@
+.footer {
+	background-color: var(--color-black);
+	padding: 10px 30px;
+	box-shadow: 0 -1px 20px 0 rgba(97, 176, 245, .6);
+	margin-top: 30px;
+
+	@include media-query($tablet) {
+		padding: 10px 20px;
+	}
+
+	@include media-query($small) {
+		position: relative;
+	}
+
+	.footer__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		@include media-query($tablet) {
+			flex-direction: row-reverse;
+		}
+
+		.footer__copyright {
+			font-size: 20px;
+			fill: var(--color-white);
+			display: flex;
+			align-items: center;
+			letter-spacing: 3px;
+
+			@include media-query($tablet) {
+				width: 100%;
+				line-height: 2.5;
+			}
+
+			svg {
+				height: 20px;
+				margin: 0 7px 0 5px;
+
+				@include media-query($tablet) {
+					height: 16px;
+				}
+			}
+
+			a {
+				color: var(--color-green);
+
+				@include media-query($tablet) {
+					font-size: 16px;
+				}
+
+				&:hover {
+					color: var(--color-blue-dark);
+				}
+			}
+
+			span {
+				font-size: 16px;
+				color: var(--color-white);
+
+				@include media-query($extra-small) {
+					display: none;
+				}
+			}
+
+			.small {
+				display: none;
+
+				@include media-query($extra-small) {
+					display: block;
+				}
+			}
+		}
+
+		.footer__menu {
+			display: flex;
+
+			@include media-query($tablet) {
+				width: 100%;
+			}
+
+			@include media-query($small) {
+				flex-direction: column;
+			}
+
+			a {
+				font-size: 16px;
+				color: var(--color-blue-dark);
+				margin: 0 5px;
+				text-transform: uppercase;
+				line-height: 3;
+
+				@include media-query($tablet) {
+					&:first-child {
+						margin: 0 5px 0 0;
+					}
+				}
+
+				@include media-query($medium) {
+					margin: 0 10px 10px 0;
+				}
+
+				&:hover {
+					color: var(--color-white);
+				}
+			}
+		}
+
+		.footer__social-button {
+			display: flex;
+
+			@include media-query($tablet) {
+				position: absolute;
+			}
+
+			@include media-query($small) {
+				top: 19px;
+			}
+
+			svg {
+				width: 25px;
+				height: 25px;
+				cursor: pointer;
+				margin: 0 10px;
+				fill: var(--color-white);
+
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+
+			svg.facebook {
+				&:hover {
+						fill: #2a7ec1;
+				}
+			}
+
+			svg.instagram {
+				&:hover {
+						fill: #ffa184;
+
+					circle {
+						fill: #ffa184 !important;
+					}
+				}
+			}
+
+			svg.twitter {
+				&:hover {
+						fill: #87c6e3;
+				}
+			}
+		}
+	}
+}
+
+
+

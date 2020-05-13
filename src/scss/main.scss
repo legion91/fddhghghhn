@@ -1,0 +1,19 @@
+// Main files
+
+@import 'nullstyle';
+@import 'variables';
+@import 'fonts';
+@import 'global';
+@import 'preloader';
+@import 'slick';
+
+// Site body
+
+@import 'header';
+@import 'footer';
+
+// Sections
+
+@import 'top-games';
+@import 'mods';
+@import 'release';
