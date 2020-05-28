@@ -87,11 +87,13 @@
 			}
 
 			a {
-				font: 20px $font_noto;
+				font-family: $font_noto;
 				color: var(--color-blue-dark);
 				text-transform: uppercase;
 				padding: 22px;
 				transition: $transition_2ms !important;
+
+				@include adaptiv-font(20, 16);
 
 				@include media-query($small) {
 					padding: 20px;

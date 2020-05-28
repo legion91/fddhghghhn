@@ -8,6 +8,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "aos": "^2.3.4",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",

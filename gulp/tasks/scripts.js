@@ -1,6 +1,6 @@
 module.exports = function () {
 	$.gulp.task('scripts:lib', function () {
-		return $.gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/slick-carousel/slick/slick.min.js'])
+		return $.gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/slick-carousel/slick/slick.min.js', 'node_modules/aos/dist/aos.js'])
 				.pipe($.gp.concat('libs.min.js'))
 				.pipe($.gp.uglify())
 				.pipe($.gulp.dest('build/js'))
