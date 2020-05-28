@@ -21,6 +21,16 @@
 	}
 }
 
+// Adaptive font size
+
+$maxWidth: 1440;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
 // Grid Breakpoints and Class Names
 
 $grid-extra-small: 420px;
@@ -60,6 +70,7 @@ $breakpoints: (
 :root {
 	--color-white: #fdfdfd;
 	--color-black: #393e46;
+	--color-grey: #37474f;
 	--color-blue-dark: #61b0f5;
 	--color-blue-light: #1fb6f2;
 	--color-green: #84c5ae;
@@ -67,6 +78,7 @@ $breakpoints: (
 
 	--color-white-hover: #f1f1f1;
 	--color-black-hover: #7b8189;
+	--color-grey-hover: #eceff1;
 	--color-blue-dark-hover: #4ea5f1;
 	--color-blue-light-hover: #1ba9e2;
 	--color-green-hover: #97ceba;

@@ -73,6 +73,10 @@ $(document).ready(function () {
 				$('.header').css('background-color', 'var(--color-green-hover)');
 			}
 		}
-	});
+	})
+	
+	// AOS
+	
+	AOS.init();
 });
 
