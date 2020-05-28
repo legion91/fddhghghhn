@@ -27,7 +27,6 @@
     justify-content: center;
 
     @include media-query($tablet) {
-      max-width: 999px;
       margin: 0 auto;
       padding: 0;
     }
